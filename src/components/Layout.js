@@ -9,17 +9,20 @@ export default function Layout() {
             display: 'flex',
             height: '100vh',
             width: '100vw',
-            overflow: 'hidden'
+            overflow: 'hidden',
         }}>
-            <div style={{
-                width: '75.00vw',
-                height: '100vh',
-                backgroundColor: theme.black,
-                color: theme.white,
-                padding: '40px',
-                overflowY: 'auto',
-                boxSizing: 'border-box'
-            }}>
+            <div
+                className="scroll-hide"
+                style={{
+                    width: '80vw',
+                    height: '100vh',
+                    backgroundColor: theme.black,
+                    color: theme.white,
+                    padding: '40px',
+                    overflowY: 'auto',
+                    boxSizing: 'border-box',
+                    overscrollBehaviorY: 'contain'
+                }}>
                 <Outlet />
             </div>
 
@@ -30,26 +33,46 @@ export default function Layout() {
                 flexDirection: 'column',
                 gap: '15px',
                 paddingRight: '20px',
-                backgroundColor: theme.white,
+                backgroundColor: '#1e1d54',
                 position: 'relative',
                 boxSizing: 'border-box'
             }}>
                 <MenuButton to="/profile">Profile</MenuButton>
-                <MenuButton to="/career" bgColor={theme.black} text="Career" textColor={theme.white}  >Career</MenuButton>
+                <MenuButton to="/career" text="Career"   >Career</MenuButton>
                 <MenuButton to="/project" text="Project" >Project</MenuButton>
-                <MenuButton to="/study" bgColor={theme.black} text="Study" textColor={theme.gray} >Study</MenuButton>
+                <MenuButton to="/study" text="Study" >Study</MenuButton>
 
-                <Link to="/" style={{
+                <div style={{
                     position: 'absolute',
-                    bottom: '10px',
-                    right: '30px',
-                    color: theme.black,
-                    fontSize: '40px',
-                    transition: 'transform 0.2s',
-                    cursor: 'pointer'
+                    bottom: '20px',
+                    left: '0',
+                    right: '20px',
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    alignItems: 'center',
+                    gap: '15px',
+                    pointerEvents: 'none'
                 }}>
-                    <FaHome />
-                </Link>
+                    <span style={{
+                        color: theme.gray,
+                        fontSize: '13px',
+                        textAlign: 'right',
+                        lineHeight: '1.4'
+                    }}>
+                        © 2026. Minji Jeong.<br />
+                        All rights reserved.
+                    </span>
+
+                    <Link to="/" style={{
+                        color: theme.white,
+                        fontSize: '35px',
+                        cursor: 'pointer',
+                        pointerEvents: 'auto',
+                        display: 'flex'
+                    }}>
+                        <FaHome />
+                    </Link>
+                </div>
             </nav>
         </div>
     );
