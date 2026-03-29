@@ -1,0 +1,106 @@
+import Typography from "../components/Typography";
+import DashedBox from "../components/DashedBox";
+import theme from "../Theme";
+import Flex from "../components/Flex";
+import BulletList from "../components/List";
+import Icon from "../components/Icons";
+
+function Project() {
+    return (
+        <Flex direction="column" gap="40px" align="stretch">
+            <ProjectItem
+                title="Pokedex"
+                date="2026.02 - 1 week"
+                description="Flutter 3.41.1 • Riverpod • Dio"
+                github="https://github.com/jeongminji4490/flutter-simple-pokedex"
+                link="http://minji-pokedex-flutter-web.s3-website-ap-southeast-2.amazonaws.com/"
+                features={[
+                    <><strong>Infinite Scroll:</strong> Implemented pagination using PokéAPI's `next` URL.</>,
+                    <><strong>Interactive UI:</strong> Mouse-hover bubble overlays and tap-to-flip animations</>,
+                    <><strong>Search System:</strong> Real-time Pokémon search functionality by name.</>
+                ]}
+                techs={[
+                    { icon: <Icon.Flutter />, text: "Flutter", color: "#2088ff" },
+                    { icon: <Icon.Riverpod />, text: "Riverpod", color: "#05998b" },
+                    { icon: <Icon.Cloud />, text: "AWS S3", color: "#ff4b4b" }
+                ]}
+            />
+
+            <ProjectItem
+                title="Nickname Generator"
+                date="2026.01 - 2 days"
+                description="Full-stack Web Service • LLM Integration"
+                github="https://github.com/jeongminji4490/nickname_maker"
+                link="http://13.238.182.199:8501/"
+                features={[
+                    "OpenAI GPT-4o-mini used for intelligent nickname generation.",
+                    "Separation of concerns using Python-based FastAPI and Streamlit.",
+                    "Containerized with Docker & Docker Compose for stable deployment.",
+                    "Automated CI/CD workflow via GitHub Actions to AWS EC2."
+                ]}
+                techs={[
+                    { icon: <Icon.Python />, text: "Python", color: "#038b40" },
+                    { icon: <Icon.Docker />, text: "Docker", color: "#2496ed" },
+                    { icon: <Icon.Cloud />, text: "AWS EC2", color: "#ff4b4b" }
+                ]}
+            />
+        </Flex>
+    );
+}
+
+function ProjectItem({ title, date, description, github, link, features, techs }) {
+    return (
+        <DashedBox>
+            <Flex direction="row" justify="space-between" align="flex-start" style={{ marginBottom: '25px' }}>
+                <div>
+                    <Flex direction="row" align="baseline" gap="10px">
+                        <Typography size="lg">{title}</Typography>
+                        <Typography size="sm" variant="title" color="gray">{date}</Typography>
+                    </Flex>
+                    <Typography size="xs" color="gray" style={{ marginTop: '5px' }}>{description}</Typography>
+                </div>
+
+                <div style={{ display: 'flex', gap: '15px' }}>
+                    {github && <a href={github} target="_blank" rel="noreferrer" style={{ color: theme.white }}><Icon.Github size={24} /></a>}
+                    {link && <a href={link} target="_blank" rel="noreferrer" style={{ color: theme.white }}><Icon.Link size={22} /></a>}
+                </div>
+            </Flex>
+
+            <div style={{ marginBottom: '30px' }}>
+                <Typography size="sm" weight="bold" color="lightGray" style={{ marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Icon.Code size={14} /> Key Features
+                </Typography>
+                <BulletList gap="10px">
+                    {features.map((feature, i) => <span key={i}>{feature}</span>)}
+                </BulletList>
+            </div>
+
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                {techs.map((tech, i) => (
+                    <TechTag key={i} icon={tech.icon} text={tech.text} color={tech.color} />
+                ))}
+            </div>
+        </DashedBox>
+    );
+}
+
+function TechTag({ icon, text, color }) {
+    return (
+        <span style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            padding: '5px 12px',
+            borderRadius: '20px',
+            fontSize: '11px',
+            backgroundColor: 'rgba(255,255,255,0.05)',
+            color: '#fff',
+            border: `1px solid ${color}44`,
+        }}>
+            <span style={{ color: color, display: 'flex' }}>{icon}</span>
+            {text}
+        </span>
+    );
+}
+
+export default Project;

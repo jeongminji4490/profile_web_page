@@ -39,7 +39,7 @@ export default function Layout() {
             }}>
                 <MenuButton to="/profile">Profile</MenuButton>
                 <MenuButton to="/career" text="Career"   >Career</MenuButton>
-                <MenuButton to="/project" text="Project" >Project</MenuButton>
+                <MenuButton to="/project" text="Toy Project" >Project</MenuButton>
                 <MenuButton to="/study" text="Study" >Study</MenuButton>
 
                 <div style={{

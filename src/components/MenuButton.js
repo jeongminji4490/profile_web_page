@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function MenuButton({
     children,
     text = "Profile",
     to = "/profile"
 }) {
-    const buttonStyle = {
+    const getButtonStyle = ({ isActive }) => ({
         width: '263px',
         height: '83px',
         fontFamily: "'Anton SC', sans-serif",
@@ -13,50 +13,20 @@ function MenuButton({
         fontWeight: '500',
         border: 'none',
         cursor: 'pointer',
-        color: '#ffffff',
+        color: isActive ? '#FFD700' : '#ffffff',
         textDecoration: 'none',
         display: 'flex',
         alignItems: 'center',
         marginTop: '10px',
         paddingLeft: '25px',
-    };
+        transition: 'all 0.3s ease'
+    });
 
     return (
-        <Link to={to} style={buttonStyle}>
+        <NavLink to={to} style={getButtonStyle}>
             {text || children}
-        </Link>
+        </NavLink>
     );
 }
-
-// function MenuButton({
-//     children,
-//     bgColor = '#DBDBDB',
-//     textColor = "#000000",
-//     text = "Profile",
-//     to = "/profile"
-// }) {
-//     const buttonStyle = {
-//         width: '263px',
-//         height: '83px',
-//         fontFamily: "'Anton SC', sans-serif",
-//         fontSize: '40px',
-//         fontWeight: '500',
-//         border: 'none',
-//         cursor: 'pointer',
-//         backgroundColor: bgColor,
-//         color: textColor,
-//         textDecoration: 'none',
-//         display: 'flex',
-//         alignItems: 'center',
-//         justifyContent: 'center',
-//         textAlign: 'center'
-//     };
-
-//     return (
-//         <Link to={to} style={buttonStyle}>
-//             {text || children}
-//         </Link>
-//     );
-// }
 
 export default MenuButton;
