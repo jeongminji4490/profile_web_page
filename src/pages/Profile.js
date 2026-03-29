@@ -2,7 +2,7 @@ import Typography from "../components/Typography";
 import DashedBox from "../components/DashedBox";
 import Flex from "../components/Flex";
 import profileImg from "../assets/profile.jpeg";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Icon from "../components/Icons";
 import LinkText from "../components/LinkText";
 
 function Profile() {
@@ -27,10 +27,10 @@ function Profile() {
                             Software Engineer
                         </Typography>
                         <a href="https://github.com/jeongminji4490" target="_blank" rel="noopener noreferrer">
-                            <FaGithub size={25} color="white" style={{ cursor: 'pointer' }} />
+                            <Icon.Github size={25} color="white" style={{ cursor: 'pointer' }} />
                         </a>
                         <a href="https://www.linkedin.com/in/minji-jeong-97a1b4236/" target="_blank" rel="noopener noreferrer">
-                            <FaLinkedin size={25} color="white" style={{ cursor: 'pointer' }} />
+                            <Icon.LinkedIn size={25} color="white" style={{ cursor: 'pointer' }} />
                         </a>
                     </Flex>
                 </Flex>

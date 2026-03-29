@@ -1,4 +1,4 @@
-import { FaGithub, FaExternalLinkAlt, FaCode, FaDocker, FaPython, FaCloud } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaCode, FaDocker, FaPython, FaCloud, FaLinkedin } from "react-icons/fa";
 import { FaFlutter } from "react-icons/fa6";
 
 export const Icon = {
@@ -10,6 +10,7 @@ export const Icon = {
     Cloud: FaCloud,
     Flutter: FaFlutter,
     Riverpod: FaFlutter,
+    LinkedIn: FaLinkedin,
 };
 
 export default Icon;

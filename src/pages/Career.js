@@ -1,7 +1,7 @@
 import Typography from "../components/Typography";
 import Flex from "../components/Flex";
 import DashedBox from "../components/DashedBox";
-import BulletList from "../components/List";
+import BulletList from "../components/BulletList";
 
 function Career() {
     return (

@@ -16,7 +16,7 @@ export default function Layout() {
                 style={{
                     width: '80vw',
                     height: '100vh',
-                    backgroundColor: theme.black,
+                    backgroundColor: theme.indigoBlue,
                     color: theme.white,
                     padding: '40px',
                     overflowY: 'auto',
@@ -33,7 +33,7 @@ export default function Layout() {
                 flexDirection: 'column',
                 gap: '15px',
                 paddingRight: '20px',
-                backgroundColor: '#1e1d54',
+                backgroundColor: theme.gray,
                 position: 'relative',
                 boxSizing: 'border-box'
             }}>

@@ -2,7 +2,7 @@ import Typography from "../components/Typography";
 import DashedBox from "../components/DashedBox";
 import theme from "../Theme";
 import Flex from "../components/Flex";
-import BulletList from "../components/List";
+import BulletList from "../components/BulletList";
 import Icon from "../components/Icons";
 
 function Project() {
@@ -39,7 +39,7 @@ function Project() {
                     "Automated CI/CD workflow via GitHub Actions to AWS EC2."
                 ]}
                 techs={[
-                    { icon: <Icon.Python />, text: "Python", color: "#038b40" },
+                    { icon: <Icon.Python />, text: "Python", color: "#ffd700" },
                     { icon: <Icon.Docker />, text: "Docker", color: "#2496ed" },
                     { icon: <Icon.Cloud />, text: "AWS EC2", color: "#ff4b4b" }
                 ]}
