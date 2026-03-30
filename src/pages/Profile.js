@@ -4,8 +4,10 @@ import Flex from "../components/Flex";
 import profileImg from "../assets/profile.jpeg";
 import Icon from "../components/Icons";
 import LinkText from "../components/LinkText";
+import { useTranslation } from 'react-i18next';
 
 function Profile() {
+    const { t } = useTranslation('profile');
 
     const imageStyle = {
         width: '250px',
@@ -40,9 +42,9 @@ function Profile() {
             </Typography>
             <DashedBox>
                 <Typography size="sm" variant="body" color="lightGray">
-                    I’m a software engineer with 3+ years of experience in mobile application development. I began my career as an Android developer, where I built a foundation in developing scalable and maintainable applications.
-                    In addition, I have experience in automating development workflows and building efficient CI/CD pipelines, enabling faster and more reliable delivery of mobile software.
-                    Beyond my professional work, I actively expand my expertise through side projects, exploring diverse domains such as AI and cloud technologies.
+                    {t('introduction1')}
+                    {t('introduction2')}
+                    {t('introduction3')}
                 </Typography>
             </DashedBox>
             <Typography size="lg">
@@ -64,17 +66,17 @@ function Profile() {
                 Education
             </Typography>
             <Typography size="sm" variant="semiTitle" color="lightGray">
-                Chungbuk National University (2020-2022)
+                {t('education1')} (2020-2022)
             </Typography>
             <Typography size="xs" variant="body" color="lightGray">
-                Bachelor of Computer Science
+                {t('education2')}
             </Typography>
             <Typography size="xs" variant="body" color="lightGray">
-                Published paper: CNN based Hand Gesture Authentication Model
+                {t('education3')}
                 <LinkText text="DBpia" link="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10664680" />
             </Typography>
             <Typography size="xs" variant="body" color="lightGray">
-                Project: Hand gesture authentication program written by Python
+                {t('education4')}
                 <LinkText text="GitHub" link="https://github.com/jeongminji4490/UTH-pro" />
             </Typography>
         </Flex>

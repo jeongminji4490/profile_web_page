@@ -2,6 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 import MenuButton from "./MenuButton";
 import theme from "../Theme";
 import { FaHome } from "react-icons/fa";
+import LaunguageSwitcher from "./LanguageSwitcher";
 
 export default function Layout() {
     return (
@@ -42,9 +43,11 @@ export default function Layout() {
                 <MenuButton to="/project" text="Toy Project" >Project</MenuButton>
                 <MenuButton to="/study" text="Study" >Study</MenuButton>
 
+                <LaunguageSwitcher></LaunguageSwitcher>
+
                 <div style={{
                     position: 'absolute',
-                    bottom: '20px',
+                    bottom: '10px',
                     left: '0',
                     right: '20px',
                     display: 'flex',
@@ -54,7 +57,7 @@ export default function Layout() {
                     pointerEvents: 'none'
                 }}>
                     <span style={{
-                        color: theme.gray,
+                        color: theme.black,
                         fontSize: '13px',
                         textAlign: 'right',
                         lineHeight: '1.4'
