@@ -6,7 +6,6 @@ import Flex from "../components/Flex";
 import theme from "../Theme";
 import { LiaQrcodeSolid } from "react-icons/lia";
 import { useTranslation } from 'react-i18next';
-import LaunguageSwitcher from '../components/LanguageSwitcher';
 
 function Home() {
     const { t } = useTranslation('home');
@@ -65,9 +64,6 @@ function Home() {
                         </Typography>
                     </Flex>
                 </Flex>
-
-                <LaunguageSwitcher ns={'home'}>
-                </LaunguageSwitcher>
 
             </Flex>
         </div>

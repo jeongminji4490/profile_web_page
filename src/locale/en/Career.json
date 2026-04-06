@@ -1,0 +1,12 @@
+{
+    "career_1_1": "Implemented an initial CI/CD pipeline.",
+    "career_1_2": "Leveraged GitHub Actions and Bash to automate the entire build, binary creation, tagging, release note creation, and upload process.",
+    "career_2_1": "Designed and implemented a GoRouter-based app-wide routing structure.",
+    "career_2_2": "Improved navigation flexibility and intuition by transitioning from imperative to declarative routing.",
+    "career_2_3": "Resolved data loss issues on web platforms, ensuring consistent state persistence even after browser refreshes.",
+    "career_3_1": "Contributed to the development of released or upcoming features.",
+    "career_4_1": "Implemented voice chat through STT/TTS package integration.",
+    "career_4_2": "Implemented app UI based on the wireframe.",
+    "career_5_1": "Built a CI environment that enables PR-level build verification for all mobile platforms.",
+    "career_5_2": "Resolved build issues caused by inconsistencies in local build environments between team members through CI environment maintenance."
+}

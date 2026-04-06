@@ -1,0 +1,9 @@
+{
+    "pokedex_1": "무한 스크롤: PokéAPI의 `next` URL을 사용하여 페이지네이션 구현",
+    "pokedex_2": "인터랙티브 UI: 마우스 호버 버블 오버레이 및 탭 시 뒤집기 애니메이션",
+    "pokedex_3": "검색 시스템: 포켓몬 이름 기반 검색 기능",
+    "nickname_1": "OpenAI GPT-4o-mini를 사용한 지능형 닉네임 생성",
+    "nickname_2": "Streamlit을 사용한 UI 개발 및 FastAPI 기반 백엔드 구현",
+    "nickname_3": "Docker 및 Docker Compose를 사용한 안정적인 배포",
+    "nickname_4": "GitHub Actions Workflow 기반 AWS EC2 배포"
+}

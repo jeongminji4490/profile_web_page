@@ -1,0 +1,9 @@
+{
+    "pokedex_1": "Infinite Scroll: Implemented pagination using PokéAPI's `next` URL",
+    "pokedex_2": "Interactive UI: Mouse-hover bubble overlays and tap-to-flip animations",
+    "pokedex_3": "Search System: Real-time Pokémon search functionality by name",
+    "nickname_1": "OpenAI GPT-4o-mini used for intelligent nickname generation",
+    "nickname_2": "Separation of concerns using Python-based FastAPI and Streamlit",
+    "nickname_3": "Containerized with Docker & Docker Compose for stable deployment",
+    "nickname_4": "Automated CI/CD workflow via GitHub Actions to AWS EC2"
+}

@@ -4,8 +4,11 @@ import theme from "../Theme";
 import Flex from "../components/Flex";
 import BulletList from "../components/BulletList";
 import Icon from "../components/Icons";
+import { useTranslation } from "react-i18next";
 
 function Project() {
+    const { t } = useTranslation('project');
+
     return (
         <Flex direction="column" gap="40px" align="stretch">
             <ProjectItem
@@ -15,9 +18,9 @@ function Project() {
                 github="https://github.com/jeongminji4490/flutter-simple-pokedex"
                 link="http://minji-pokedex-flutter-web.s3-website-ap-southeast-2.amazonaws.com/"
                 features={[
-                    <><strong>Infinite Scroll:</strong> Implemented pagination using PokéAPI's `next` URL.</>,
-                    <><strong>Interactive UI:</strong> Mouse-hover bubble overlays and tap-to-flip animations</>,
-                    <><strong>Search System:</strong> Real-time Pokémon search functionality by name.</>
+                    <>{t('pokedex_1')}</>,
+                    <>{t('pokedex_2')}</>,
+                    <>{t('pokedex_3')}</>
                 ]}
                 techs={[
                     { icon: <Icon.Flutter />, text: "Flutter", color: "#2088ff" },
@@ -33,10 +36,10 @@ function Project() {
                 github="https://github.com/jeongminji4490/nickname_maker"
                 link="http://13.238.182.199:8501/"
                 features={[
-                    "OpenAI GPT-4o-mini used for intelligent nickname generation.",
-                    "Separation of concerns using Python-based FastAPI and Streamlit.",
-                    "Containerized with Docker & Docker Compose for stable deployment.",
-                    "Automated CI/CD workflow via GitHub Actions to AWS EC2."
+                    <>{t('nickname_1')}</>,
+                    <>{t('nickname_2')}</>,
+                    <>{t('nickname_3')}</>,
+                    <>{t('nickname_4')}</>
                 ]}
                 techs={[
                     { icon: <Icon.Python />, text: "Python", color: "#ffd700" },

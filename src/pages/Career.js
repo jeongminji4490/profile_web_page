@@ -2,8 +2,11 @@ import Typography from "../components/Typography";
 import Flex from "../components/Flex";
 import DashedBox from "../components/DashedBox";
 import BulletList from "../components/BulletList";
+import { useTranslation } from "react-i18next";
 
 function Career() {
+    const { t } = useTranslation('career');
+
     return (
         <Flex align="start">
             <Typography size="lg">
@@ -21,8 +24,8 @@ function Career() {
                 </Typography>
 
                 <BulletList>
-                    <span>Implemented an initial CI/CD pipeline.</span>
-                    <span>Leveraged GitHub Actions and Bash to automate the entire build, binary creation, tagging, release note creation, and upload process </span>
+                    <span>{t('career_1_1')}</span>
+                    <span>{t('career_1_2')}</span>
                 </BulletList>
 
                 <Typography size="sm" variant="body" style={{ marginTop: '15px', marginBottom: '15px' }}>
@@ -33,9 +36,9 @@ function Career() {
                 </Typography>
 
                 <BulletList>
-                    <span>Designed and implemented a <strong>GoRouter-based</strong> app-wide routing structure.</span>
-                    <span>Improved navigation flexibility and intuition by transitioning from imperative to declarative routing.</span>
-                    <span>Resolved data loss issues on web platforms, ensuring consistent state persistence even after browser refreshes.</span>
+                    <span>{t('career_2_1')}</span>
+                    <span>{t('career_2_2')}</span>
+                    <span>{t('career_2_3')}</span>
                 </BulletList>
 
                 <Typography size="sm" variant="body" style={{ marginTop: '15px', marginBottom: '15px' }}>
@@ -47,7 +50,7 @@ function Career() {
 
 
                 <BulletList>
-                    <span>Contributed to the development of released or upcoming features.</span>
+                    <span>{t('career_3_1')}</span>
                 </BulletList>
             </DashedBox>
 
@@ -67,8 +70,8 @@ function Career() {
                 </Typography>
 
                 <BulletList>
-                    <span>Implemented voice chat through STT/TTS package integration.</span>
-                    <span>Implemented app UI based on the wireframe.</span>
+                    <span>{t('career_4_1')}</span>
+                    <span>{t('career_4_2')}</span>
                 </BulletList>
 
                 <Typography size="sm" variant="body" style={{ marginTop: '15px', marginBottom: '15px' }}>
@@ -79,8 +82,8 @@ function Career() {
                 </Typography>
 
                 <BulletList>
-                    <span>Built a CI environment that enables PR-level build verification for all mobile platforms.</span>
-                    <span>Resolved build issues caused by inconsistencies in local build environments between team members through CI environment maintenance.</span>
+                    <span>{t('career_5_1')}</span>
+                    <span>{t('career_5_2')}</span>
                 </BulletList>
             </DashedBox>
         </Flex>
