@@ -1,9 +1,9 @@
 const SIZES = {
-    xs: { fontSize: '18px' },
-    sm: { fontSize: '22px' },
-    md: { fontSize: '30px' },
-    lg: { fontSize: '40px' },
-    xl: { fontSize: '60px' }
+    xs: { fontSize: 'clamp(14px, 1.5vw, 18px)' },
+    sm: { fontSize: 'clamp(16px, 2vw, 22px)' },
+    md: { fontSize: 'clamp(20px, 3vw, 30px)' },
+    lg: { fontSize: 'clamp(28px, 4vw, 40px)' },
+    xl: { fontSize: 'clamp(40px, 6vw, 60px)' }
 }
 
 const FONTS = {

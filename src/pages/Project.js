@@ -1,5 +1,4 @@
 import Typography from "../components/Typography";
-import DashedBox from "../components/DashedBox";
 import theme from "../Theme";
 import Flex from "../components/Flex";
 import BulletList from "../components/BulletList";
@@ -10,7 +9,7 @@ function Project() {
     const { t } = useTranslation('project');
 
     return (
-        <Flex direction="column" gap="40px" align="stretch">
+        <Flex direction="column" gap="20px" align="stretch">
             <ProjectItem
                 title="Pokedex"
                 date="2026.02 - 1 week"
@@ -28,6 +27,12 @@ function Project() {
                     { icon: <Icon.Cloud />, text: "AWS S3", color: "#ff4b4b" }
                 ]}
             />
+
+            <div style={{
+                width: '100%',
+                borderTop: `2px dashed ${theme.gray}`,
+                margin: '10px 0'
+            }} />
 
             <ProjectItem
                 title="Nickname Generator"
@@ -53,19 +58,18 @@ function Project() {
 
 function ProjectItem({ title, date, description, github, link, features, techs }) {
     return (
-        <DashedBox>
+        <Flex align="start">
             <Flex direction="row" justify="space-between" align="flex-start" style={{ marginBottom: '25px' }}>
                 <div>
+                    <div style={{ display: 'flex', gap: '15px', marginBottom: '10px' }}>
+                        {github && <a href={github} target="_blank" rel="noreferrer" style={{ color: theme.white }}><Icon.Github size={24} /></a>}
+                        {link && <a href={link} target="_blank" rel="noreferrer" style={{ color: theme.white }}><Icon.Link size={22} /></a>}
+                    </div>
                     <Flex direction="row" align="baseline" gap="10px">
                         <Typography size="lg">{title}</Typography>
                         <Typography size="sm" variant="title" color="gray">{date}</Typography>
                     </Flex>
                     <Typography size="xs" color="gray" style={{ marginTop: '5px' }}>{description}</Typography>
-                </div>
-
-                <div style={{ display: 'flex', gap: '15px' }}>
-                    {github && <a href={github} target="_blank" rel="noreferrer" style={{ color: theme.white }}><Icon.Github size={24} /></a>}
-                    {link && <a href={link} target="_blank" rel="noreferrer" style={{ color: theme.white }}><Icon.Link size={22} /></a>}
                 </div>
             </Flex>
 
@@ -83,7 +87,7 @@ function ProjectItem({ title, date, description, github, link, features, techs }
                     <TechTag key={i} icon={tech.icon} text={tech.text} color={tech.color} />
                 ))}
             </div>
-        </DashedBox>
+        </Flex>
     );
 }
 

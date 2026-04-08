@@ -10,10 +10,10 @@ function Profile() {
     const { t } = useTranslation('profile');
 
     const imageStyle = {
-        width: '250px',
-        height: '250px',
+        width: 'clamp(60px, 15vw, 250px)',
+        aspectRatio: '1 / 1',
         borderRadius: '50%',
-        objectFit: 'cover'
+        objectFit: 'cover',
     };
 
     return (
