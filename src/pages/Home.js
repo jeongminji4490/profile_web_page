@@ -48,7 +48,13 @@ function Home() {
                     </div>
                 )}
 
-                <Flex direction="row" gap="50px" style={{ marginTop: '50px' }}>
+                <Flex
+                    direction="row"
+                    style={{
+                        marginTop: '50px',
+                        width: '100%',
+                    }}
+                >
                     <LiaQrcodeSolid size={100} color={theme.white} />
                     <Flex direction="column" align="start" gap="8px">
                         <Typography size="xs" variant="body" color={theme.lightGray} style={{ marginBottom: '10px' }}>
@@ -93,6 +99,7 @@ const pageStyle = {
     padding: '10%',
     overflow: 'hidden',
     cursor: 'default',
+    boxSizing: 'border-box',
 };
 
 export default Home;
