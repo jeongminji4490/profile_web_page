@@ -8,27 +8,30 @@ const SIZES = {
 
 const FONTS = {
     title: {
-        fontFamily: "'Anton SC', sans-serif",
+        fontFamily: "'BJCree', serif",
+        fontWeight: '600'
     },
     semiTitle: {
-        fontFamily: "'Inconsolata', sans-serif",
-        fontWeight: '700'
+        fontFamily: "'BJCree', serif",
+        fontWeight: '600'
     },
     body: {
-        fontFamily: "'Inconsolata', sans-serif",
-    }
+        fontFamily: "'BJCree', serif",
+    },
 }
 
 function Typography({
     tag: Tag = 'p',
-    variant = 'title',
+    variant = 'body',
     size = 'md',
-    color = 'white',
+    color = 'black',
     children,
-    style
+    style = {}
 }) {
     const combinedStyle = {
         margin: 0,
+        marginTop: '2px',
+        marginBottom: '2px',
         color: color,
         ...FONTS[variant],
         ...SIZES[size],

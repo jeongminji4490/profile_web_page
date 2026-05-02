@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import MenuButton from "./MenuButton";
 import theme from "../Theme";
-import { FaHome, FaBars, FaAngleDoubleRight } from "react-icons/fa";
+import { FaBars, FaAngleDoubleRight } from "react-icons/fa";
 import LaunguageSwitcher from "./LanguageSwitcher";
 
 export default function Layout() {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     const toggleDrawer = () => setIsOpen(!isOpen);
 
@@ -22,7 +22,7 @@ export default function Layout() {
                 style={{
                     flex: 1,
                     height: '100vh',
-                    backgroundColor: theme.indigoBlue,
+                    backgroundColor: theme.white,
                     color: theme.white,
                     padding: '40px',
                     overflowY: 'auto',
@@ -42,7 +42,7 @@ export default function Layout() {
                 flexDirection: 'column',
                 gap: '15px',
                 padding: isOpen ? '60px 0px 0px 0px' : '0px',
-                backgroundColor: theme.gray,
+                backgroundColor: theme.black,
                 position: 'relative',
                 boxSizing: 'border-box',
                 transition: 'all 0.3s ease',
@@ -57,6 +57,7 @@ export default function Layout() {
                         background: 'none',
                         border: 'none',
                         color: theme.white,
+                        backgroundColor: 'transparent',
                         fontSize: '30px',
                         cursor: 'pointer'
                     }}
@@ -64,7 +65,7 @@ export default function Layout() {
                     <FaAngleDoubleRight />
                 </button>
 
-                <MenuButton to="/profile">Profile</MenuButton>
+                <MenuButton to="/">Profile</MenuButton>
                 <MenuButton to="/career" text="Career">Career</MenuButton>
                 <MenuButton to="/project" text="Toy Project">Project</MenuButton>
                 <MenuButton to="/study" text="Study">Study</MenuButton>
@@ -84,24 +85,16 @@ export default function Layout() {
                     whiteSpace: 'nowrap'
                 }}>
                     <span style={{
-                        color: theme.black,
+                        color: theme.white,
                         fontSize: '11px',
                         textAlign: 'right',
-                        lineHeight: '1.4'
+                        lineHeight: '1.4',
+                        fontFamily: "'BJCree', serif"
                     }}>
                         © 2026. Minji Jeong.<br />
                         All rights reserved.
                     </span>
 
-                    <Link to="/" style={{
-                        color: theme.white,
-                        fontSize: '35px',
-                        cursor: 'pointer',
-                        pointerEvents: 'auto',
-                        display: 'flex'
-                    }}>
-                        <FaHome />
-                    </Link>
                 </div>
             </nav>
 
@@ -113,7 +106,7 @@ export default function Layout() {
                         top: '20px',
                         right: '20px',
                         zIndex: 100,
-                        backgroundColor: theme.gray,
+                        backgroundColor: theme.black,
                         border: 'none',
                         borderRadius: '5px',
                         padding: '10px',

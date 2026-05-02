@@ -4,12 +4,13 @@ import Flex from "../components/Flex";
 import BulletList from "../components/BulletList";
 import Icon from "../components/Icons";
 import { useTranslation } from "react-i18next";
+import Divider from "../components/Divider";
 
 function Project() {
     const { t } = useTranslation('project');
 
     return (
-        <Flex direction="column" gap="20px" align="stretch">
+        <Flex direction="column" gap="10px" align="stretch">
             <ProjectItem
                 title="Pokedex"
                 date="2026.02 - 1 week"
@@ -28,11 +29,7 @@ function Project() {
                 ]}
             />
 
-            <div style={{
-                width: '100%',
-                borderTop: `2px dashed ${theme.gray}`,
-                margin: '10px 0'
-            }} />
+            <Divider />
 
             <ProjectItem
                 title="Nickname Generator"
@@ -59,22 +56,22 @@ function Project() {
 function ProjectItem({ title, date, description, github, link, features, techs }) {
     return (
         <Flex align="start">
-            <Flex direction="row" justify="space-between" align="flex-start" style={{ marginBottom: '25px' }}>
+            <Flex direction="row" justify="space-between" align="flex-start">
                 <div>
                     <div style={{ display: 'flex', gap: '15px', marginBottom: '10px' }}>
-                        {github && <a href={github} target="_blank" rel="noreferrer" style={{ color: theme.white }}><Icon.Github size={24} /></a>}
-                        {link && <a href={link} target="_blank" rel="noreferrer" style={{ color: theme.white }}><Icon.Link size={22} /></a>}
+                        {github && <a href={github} target="_blank" rel="noreferrer" style={{ color: theme.black }}><Icon.Github size={24} /></a>}
+                        {link && <a href={link} target="_blank" rel="noreferrer" style={{ color: theme.black }}><Icon.Link size={22} /></a>}
                     </div>
                     <Flex direction="row" align="baseline" gap="10px">
                         <Typography size="lg">{title}</Typography>
-                        <Typography size="sm" variant="title" color="gray">{date}</Typography>
+                        <Typography size="sm" variant="title">{date}</Typography>
                     </Flex>
-                    <Typography size="xs" color="gray" style={{ marginTop: '5px' }}>{description}</Typography>
+                    <Typography size="xs" style={{ marginTop: '5px' }}>{description}</Typography>
                 </div>
             </Flex>
 
             <div style={{ marginBottom: '30px' }}>
-                <Typography size="sm" weight="bold" color="lightGray" style={{ marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <Typography size="sm" weight="bold" style={{ marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <Icon.Code size={14} /> Key Features
                 </Typography>
                 <BulletList gap="10px">

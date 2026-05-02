@@ -1,8 +1,6 @@
 import Typography from "../components/Typography";
-import DashedBox from "../components/DashedBox";
 import Flex from "../components/Flex";
 import profileImg from "../assets/profile.jpeg";
-import Icon from "../components/Icons";
 import LinkText from "../components/LinkText";
 import { useTranslation } from 'react-i18next';
 
@@ -17,65 +15,69 @@ function Profile() {
     };
 
     return (
-        <Flex gap="15px">
+        <Flex gap="10px" align="start">
             <Flex gap="20px" direction="row">
                 <img src={profileImg} alt="Profile" style={imageStyle} />
                 <Flex align="start">
-                    <Typography size="xl">
-                        Minji Jeong
+                    <Typography size="xl" variant="title">
+                        MINJI JEONG
                     </Typography>
                     <Flex direction="row" gap="15px">
-                        <Typography size="lg" color="lightGray">
+                        <Typography size="lg" variant="title">
                             Software Engineer
                         </Typography>
-                        <a href="https://github.com/jeongminji4490" target="_blank" rel="noopener noreferrer">
-                            <Icon.Github size={25} color="white" style={{ cursor: 'pointer' }} />
+                        {/* <a href="https://github.com/jeongminji4490" target="_blank" rel="noopener noreferrer">
+                            <Icon.Github size={25} style={{ cursor: 'pointer' }} />
                         </a>
                         <a href="https://www.linkedin.com/in/minji-jeong-97a1b4236/" target="_blank" rel="noopener noreferrer">
-                            <Icon.LinkedIn size={25} color="white" style={{ cursor: 'pointer' }} />
-                        </a>
+                            <Icon.LinkedIn size={25} style={{ cursor: 'pointer' }} />
+                        </a> */}
                     </Flex>
                 </Flex>
             </Flex>
-            <Typography size="lg">
+            <Typography size="lg" variant="semiTitle">
                 Introduction
             </Typography>
-            <DashedBox>
-                <Typography size="sm" variant="body" color="lightGray">
-                    {t('introduction1')}
-                    {t('introduction2')}
-                    {t('introduction3')}
-                </Typography>
-            </DashedBox>
-            <Typography size="lg">
+            <Typography size="sm">
+                {t('introduction1')}
+                {t('introduction2')}
+                {t('introduction3')}
+            </Typography>
+            <Typography size="lg" variant="semiTitle">
                 Work Experience
             </Typography>
-            <Typography size="sm" variant="semiTitle" color="lightGray">
-                GE Appliances, a Haier Company (2023.11-present)
-            </Typography>
-            <Typography size="xs" variant="body" color="lightGray">
-                Associate Software Engineer
-            </Typography>
-            <Typography size="sm" variant="semiTitle" color="lightGray">
-                GE Appliances, a Haier Company (2022.09-2023.11)
-            </Typography>
-            <Typography size="xs" variant="body" color="lightGray">
-                Software Intern
-            </Typography>
-            <Typography size="lg">
+            <Flex direction="row">
+                <Typography size="sm" variant="semiTitle" >
+                    GE Appliances, a Haier Company (2023.11-present)
+                </Typography>
+                <Typography size="sm">
+                    Associate Software Engineer
+                </Typography>
+            </Flex>
+            <Flex direction="row">
+                <Typography size="sm" variant="semiTitle" >
+                    GE Appliances, a Haier Company (2022.09-2023.09)
+                </Typography>
+                <Typography size="sm">
+                    Software Intern
+                </Typography>
+            </Flex>
+            <Typography size="lg" variant="semiTitle">
                 Education
             </Typography>
-            <Typography size="sm" variant="semiTitle" color="lightGray">
-                {t('education1')} (2020-2022)
-            </Typography>
-            <Typography size="xs" variant="body" color="lightGray">
-                {t('education2')}
-            </Typography>
-            <Typography size="xs" variant="body" color="lightGray">
+            <Flex direction="row">
+                <Typography size="sm" variant="semiTitle">
+                    {t('education1')} (2020-2022)
+                </Typography>
+                <Typography size="xs">
+                    {t('education2')}
+                </Typography>
+            </Flex>
+            <Typography size="xs">
                 {t('education3')}
                 <LinkText text="DBpia" link="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10664680" />
             </Typography>
-            <Typography size="xs" variant="body" color="lightGray">
+            <Typography size="xs">
                 {t('education4')}
                 <LinkText text="GitHub" link="https://github.com/jeongminji4490/UTH-pro" />
             </Typography>

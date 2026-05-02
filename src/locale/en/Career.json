@@ -1,12 +1,14 @@
 {
     "career_1_1": "Implemented an initial CI/CD pipeline.",
-    "career_1_2": "Leveraged GitHub Actions and Bash to automate the entire build, binary creation, tagging, release note creation, and upload process.",
+    "career_1_2": "Automated the entire release pipeline, including builds, binary generation, tagging, and release note uploads, using Bash scripts and GitHub Actions.",
+    "career_1_3": "Achieved 100% automation of GitHub issue status updates by integrating GitHub Actions with the GraphQL API, replacing previously manual workflows.",
     "career_2_1": "Designed and implemented a GoRouter-based app-wide routing structure.",
-    "career_2_2": "Improved navigation flexibility and intuition by transitioning from imperative to declarative routing.",
-    "career_2_3": "Resolved data loss issues on web platforms, ensuring consistent state persistence even after browser refreshes.",
+    "career_2_2": "Refactored imperative navigation to a declarative structure, improving code readability and maintainability.",
+    "career_2_3": "Fixed persistent routing issues where the application state was lost upon app restarts or web page refreshes",
+    "career_2_4": "Resolved navigation stack management errors that caused incorrect screen transitions.",
     "career_3_1": "Contributed to the development of released or upcoming features.",
     "career_4_1": "Implemented voice chat through STT/TTS package integration.",
     "career_4_2": "Implemented app UI based on the wireframe.",
-    "career_5_1": "Built a CI environment that enables PR-level build verification for all mobile platforms.",
+    "career_5_1": "Built a CI environment that enables PR-level build verification for all mobile platforms(Android, iOS, Flutter).",
     "career_5_2": "Resolved build issues caused by inconsistencies in local build environments between team members through CI environment maintenance."
 }

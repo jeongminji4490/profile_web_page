@@ -12,8 +12,8 @@ function BulletList({
             {
                 array.map((child, index) => (
                     <li key={index} style={{ display: 'flex', gap: '10px' }}>
-                        <span style={{ color: theme.white }}>•</span>
-                        <Typography size="xs" variant="body" color="lightGray">
+                        <span style={{ color: theme.black }}>•</span>
+                        <Typography size="xs" variant="body">
                             {child}
                         </Typography>
                     </li>
