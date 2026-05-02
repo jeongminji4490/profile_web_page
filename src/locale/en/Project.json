@@ -5,5 +5,8 @@
     "nickname_1": "OpenAI GPT-4o-mini used for intelligent nickname generation",
     "nickname_2": "Separation of concerns using Python-based FastAPI and Streamlit",
     "nickname_3": "Containerized with Docker & Docker Compose for stable deployment",
-    "nickname_4": "Automated CI/CD workflow via GitHub Actions to AWS EC2"
+    "nickname_4": "Automated CI/CD workflow via GitHub Actions to AWS EC2",
+    "portfolio_subtitle": "Built and deployed a React-based personal portfolio website",
+    "pokedex_subtitle": "A Flutter-based Pokedex web page that utilizes the PokeAPI.",
+    "nickname_subtitle": "LLM-based nickname recommendation web service"
 }

@@ -5,5 +5,8 @@
     "nickname_1": "OpenAI GPT-4o-mini를 사용한 지능형 닉네임 생성",
     "nickname_2": "Streamlit을 사용한 UI 개발 및 FastAPI 기반 백엔드 구현",
     "nickname_3": "Docker 및 Docker Compose를 사용한 안정적인 배포",
-    "nickname_4": "GitHub Actions Workflow 기반 AWS EC2 배포"
+    "nickname_4": "GitHub Actions Workflow 기반 AWS EC2 배포",
+    "portfolio_subtitle": "React 기반 개인 포트폴리오 웹사이트 구축 및 배포",
+    "pokedex_subtitle": "PokeAPI를 활용한 Flutter 기반 포켓몬 도감 웹 페이지",
+    "nickname_subtitle": "LLM 기반 닉네임 추천 웹 서비스\n\n"
 }
