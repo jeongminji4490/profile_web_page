@@ -3,8 +3,10 @@ import Flex from "../components/Flex";
 import profileImg from "../assets/profile.jpeg";
 import LinkText from "../components/LinkText";
 import { useTranslation } from 'react-i18next';
+import Icon from "../components/Icons";
+import theme from "../Theme";
 
-function Profile() {
+export default function Profile() {
     const { t } = useTranslation('profile');
 
     const imageStyle = {
@@ -26,16 +28,10 @@ function Profile() {
                         <Typography size="lg" variant="title">
                             Software Engineer
                         </Typography>
-                        {/* <a href="https://github.com/jeongminji4490" target="_blank" rel="noopener noreferrer">
-                            <Icon.Github size={25} style={{ cursor: 'pointer' }} />
-                        </a>
-                        <a href="https://www.linkedin.com/in/minji-jeong-97a1b4236/" target="_blank" rel="noopener noreferrer">
-                            <Icon.LinkedIn size={25} style={{ cursor: 'pointer' }} />
-                        </a> */}
                     </Flex>
                 </Flex>
             </Flex>
-            <Typography size="lg" variant="semiTitle">
+            <Typography size="lg" variant="semiTitle" style={{ marginTop: "20px" }}>
                 Introduction
             </Typography>
             <Typography size="sm">
@@ -43,7 +39,7 @@ function Profile() {
                 {t('introduction2')}
                 {t('introduction3')}
             </Typography>
-            <Typography size="lg" variant="semiTitle">
+            <Typography size="lg" variant="semiTitle" style={{ marginTop: "20px" }}>
                 Work Experience
             </Typography>
             <Flex direction="row">
@@ -62,7 +58,7 @@ function Profile() {
                     Software Intern
                 </Typography>
             </Flex>
-            <Typography size="lg" variant="semiTitle">
+            <Typography size="lg" variant="semiTitle" style={{ marginTop: "20px" }}>
                 Education
             </Typography>
             <Flex direction="row">
@@ -81,8 +77,20 @@ function Profile() {
                 {t('education4')}
                 <LinkText text="GitHub" link="https://github.com/jeongminji4490/UTH-pro" />
             </Typography>
+            <Typography size="lg" variant="semiTitle" style={{ marginTop: "20px" }}>
+                Links
+            </Typography>
+            <Flex direction="row" >
+                <a href="https://github.com/jeongminji4490" target="_blank" rel="noopener noreferrer">
+                    <Icon.Github size={40} style={{ cursor: 'pointer', color: theme.black }} />
+                </a>
+                <a href="https://www.linkedin.com/in/minji-jeong-97a1b4236/" target="_blank" rel="noopener noreferrer">
+                    <Icon.LinkedIn size={40} style={{ cursor: 'pointer', color: theme.black }} />
+                </a>
+                <a href="https://velog.io/@jeongminji4490/posts" target="_blank" rel="noopener noreferrer">
+                    <Icon.Blog size={40} style={{ cursor: 'pointer', color: theme.black }} />
+                </a>
+            </Flex>
         </Flex>
     );
 }
-
-export default Profile;

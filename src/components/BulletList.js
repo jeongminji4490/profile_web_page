@@ -2,7 +2,7 @@ import theme from "../Theme";
 import Typography from "./Typography";
 import React from "react";
 
-function BulletList({
+export default function BulletList({
     children,
     gap = '12px',
 }) {
@@ -22,5 +22,3 @@ function BulletList({
         </ul>
     )
 }
-
-export default BulletList;

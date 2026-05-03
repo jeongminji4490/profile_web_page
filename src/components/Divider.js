@@ -1,6 +1,6 @@
 import theme from "../Theme";
 
-function Divider() {
+export default function Divider() {
     return (
         <div style={{
             width: '100%',
@@ -9,5 +9,3 @@ function Divider() {
         }} />
     );
 }
-
-export default Divider;

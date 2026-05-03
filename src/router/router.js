@@ -2,8 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../components/Layout";
 import Profile from "../pages/Profile";
 import Career from "../pages/Career";
-import Project from "../pages/project/Project";
-import Study from "../pages/Study";
+import Project from "../pages/Project";
 
 export default function Router() {
     return (
@@ -13,7 +12,6 @@ export default function Router() {
                     <Route path="/" element={<Profile />} />
                     <Route path="career" element={<Career />} />
                     <Route path="project" element={<Project />} />
-                    <Route path="study" element={<Study />} />
                 </Route>
             </Routes>
         </BrowserRouter>

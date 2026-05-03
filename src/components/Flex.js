@@ -1,4 +1,4 @@
-function Flex({
+export default function Flex({
     children,
     direction = 'column',
     align = 'center',
@@ -17,5 +17,3 @@ function Flex({
 
     return <div style={flexStyle}>{children}</div>;
 }
-
-export default Flex;

@@ -1,4 +1,4 @@
-function DashedBox({ children }) {
+export default function DashedBox({ children }) {
     return (
         <div style={{
             border: '2px dashed #9F9F9F',
@@ -8,5 +8,3 @@ function DashedBox({ children }) {
         }}>{children}</div>
     );
 }
-
-export default DashedBox;

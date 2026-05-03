@@ -4,7 +4,7 @@ import BulletList from "../components/BulletList";
 import { useTranslation } from "react-i18next";
 import Divider from "../components/Divider";
 
-function Career() {
+export default function Career() {
     const { t } = useTranslation('career');
 
     return (
@@ -90,5 +90,3 @@ function Career() {
         </Flex>
     );
 }
-
-export default Career;

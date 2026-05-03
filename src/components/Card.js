@@ -11,7 +11,8 @@ export default function ProjectCard({
     title,
     subTitle,
     imagePath,
-    techs
+    techs,
+    link
 }) {
     return (
         <Card sx={{ maxWidth: 345 }}>
@@ -37,8 +38,8 @@ export default function ProjectCard({
                 </div>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary">
-                    GO
+                <Button size="small" color="primary" onClick={() => window.open(link, "_blank")}>
+                    Github
                 </Button>
             </CardActions>
         </Card>

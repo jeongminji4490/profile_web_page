@@ -1,7 +1,7 @@
 import theme from "../Theme";
 import { useTranslation } from "react-i18next";
 
-function LaunguageSwitcher({ ns }) {
+export default function LaunguageSwitcher({ ns }) {
     const { i18n } = useTranslation(ns);
 
     const currentLang = i18n.language;
@@ -46,5 +46,3 @@ const langButtonStyle = (isActive) => ({
     padding: '5px',
     textDecoration: isActive ? 'underline' : 'none',
 });
-
-export default LaunguageSwitcher;

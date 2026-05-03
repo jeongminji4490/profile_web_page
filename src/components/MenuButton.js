@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-function MenuButton({
+export default function MenuButton({
     children,
     text = "Profile",
     to = "/profile"
@@ -28,5 +28,3 @@ function MenuButton({
         </NavLink>
     );
 }
-
-export default MenuButton;

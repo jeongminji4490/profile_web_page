@@ -20,7 +20,7 @@ const FONTS = {
     },
 }
 
-function Typography({
+export default function Typography({
     tag: Tag = 'p',
     variant = 'body',
     size = 'md',
@@ -40,5 +40,3 @@ function Typography({
 
     return <Tag style={combinedStyle}>{children}</Tag>;
 }
-
-export default Typography;

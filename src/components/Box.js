@@ -1,4 +1,4 @@
-function Box() {
+export default function Box() {
     return (
         <div
             style={{
@@ -9,5 +9,3 @@ function Box() {
         />
     );
 }
-
-export default Box;

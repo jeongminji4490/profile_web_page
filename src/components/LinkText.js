@@ -1,4 +1,4 @@
-function LinkText({ text, link }) {
+export default function LinkText({ text, link }) {
     return (
         <a href={link} target="_blank" rel="noopener noreferrer" style={{
             color: '#58a6ff',
@@ -9,5 +9,3 @@ function LinkText({ text, link }) {
         </a>
     )
 }
-
-export default LinkText;
