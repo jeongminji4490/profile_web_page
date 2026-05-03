@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Language](https://img.shields.io/badge/language-Korean-blue.svg)](./README.ko.md)
 
-## Available Scripts
+## Project Overview
+- A personal portfolio website developed as a React-based SPA and deployed as a static site using AWS S3.
+- Implemented a professional web hosting structure including CloudFront and Route 53 to gain hands-on experience with production-level deployment and custom domain integration.
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+### 1. Page Composition
+* **Sections**: Personal Profile, Work Experience, and Project Showcases.
+* **Navigation**: Intuitive page transitions via a fixed right-hand sidebar.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Multi-language Support (Localization)
+* **i18n Implementation**: Integrated `react-i18next` to provide seamless English and Korean translations.
+* **UX Optimization**: Managed manual translation data for a more natural feel compared to auto-translation tools. Built a language switcher at the bottom right for real-time switching.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+### Frontend
+* **Framework**: React (JavaScript)
+* **Routing**: Designed an SPA routing structure using `BrowserRouter`, allowing the client to handle navigation since the project is hosted as a static site without a separate backend.
+* **UI/UX**: Responsive design optimized for both Web and Mobile environments.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Deployment & Infrastructure
+* **AWS S3**: Used for static website hosting.
+* **AWS CloudFront**: Applied as a CDN for content caching and securing the site with HTTPS (SSL/TLS).
+* **AWS Route 53**: Integrated a custom domain and linked it to the CloudFront distribution.
 
-### `npm run build`
+## Troubleshooting
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### SPA Routing Path Recognition Issue (404/403 Error)
+* **Issue**: Encountered 404/403 errors when refreshing the page or accessing specific paths (e.g., `/profile`) directly on S3 or CloudFront.
+* **Root Cause**: Static file servers attempt to locate physical files/folders matching the URL path. In an SPA, these paths exist only on the client side, causing the server to return an error when it cannot find a corresponding file.
+* **Resolution**: Configured **CloudFront Error Pages** to redirect all 403 and 404 errors to `index.html` (Fallback) and set the response code to 200, allowing the client-side router to take over.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Achievements
+- Gained a deep understanding of AWS-based static website deployment architectures.
+- Experience in optimizing web performance through CDN (CloudFront) caching.
+- Successfully managed custom domain mapping and HTTPS certificate (SSL) implementation.
+- Mastered the end-to-end lifecycle of a real-world web service deployment.
