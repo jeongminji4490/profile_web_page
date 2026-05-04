@@ -6,6 +6,9 @@
 - React 기반 SPA 구조로 개발한 개인 포트폴리오 사이트로, AWS S3를 이용하여 정적 웹사이트 형태로 배포
 - 실제 웹 서비스와 유사한 구조로 배포 경험을 쌓기 위해 CloudFront, Route53을 활용한 웹 호스팅 및 도메인 연결 과정 구현
 
+*   **개발 기간**: 9 Days
+*   **URL**: [https://devminji.com/](https://devminji.com/)
+
 ## ✨ 주요 기능
 
 ### 1. 페이지 구성
@@ -17,6 +20,12 @@
 * **UX 최적화**: 브라우저 자동 번역보다 매끄러운 사용자 경험을 위해 직접 번역 데이터를 관리하며, 우측 하단 버튼으로 실시간 언어 변경이 가능하도록 구현
 
 ## 🛠 기술 스택
+
+| Layer | Stacks |
+| :--- | :--- |
+| **Frontend** | React, Javascript |
+| **Infrastructure** | AWS S3, CloudFront, Route53 |
+
 
 ### Frontend
 * **Framework**: React (JavaScript)

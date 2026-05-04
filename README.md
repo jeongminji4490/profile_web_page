@@ -6,6 +6,9 @@
 - A personal portfolio website developed as a React-based SPA and deployed as a static site using AWS S3.
 - Implemented a professional web hosting structure including CloudFront and Route 53 to gain hands-on experience with production-level deployment and custom domain integration.
 
+*   **Development Period**: 9 Days
+*   **URL**: [https://devminji.com/](https://devminji.com/)
+
 ## ✨ Key Features
 
 ### 1. Page Composition
@@ -17,6 +20,11 @@
 * **UX Optimization**: Managed manual translation data for a more natural feel compared to auto-translation tools. Built a language switcher at the bottom right for real-time switching.
 
 ## 🛠 Tech Stack
+
+| Layer | Stacks |
+| :--- | :--- |
+| **Frontend** | React, Javascript |
+| **Infrastructure** | AWS S3, CloudFront, Route53 |
 
 ### Frontend
 * **Framework**: React (JavaScript)
